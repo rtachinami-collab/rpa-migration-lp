@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コラム詳細 | RPA移行ソリューション | Callet合同会社</title>
+    <meta name="description" content="UiPathからPower Automate (PAD) への移行・リプレイスに関するお役立ちコラムコラムです。">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -186,6 +187,19 @@
         
         // Dynamically update page title for browser tab (good for SEO)
         document.title = `${article.title} | RPA移行ソリューション | Callet合同会社`;
+
+        // Dynamically update meta description for SEO search snippets
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.setAttribute('name', 'description');
+            document.head.appendChild(metaDesc);
+        }
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = article.content;
+        const plainText = tempDiv.innerText || tempDiv.textContent || "";
+        const excerpt = plainText.substring(0, 115).trim().replace(/\s+/g, ' ') + '...';
+        metaDesc.setAttribute('content', excerpt);
     </script>
 
 </body>
