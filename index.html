@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPAライセンス費用比較・PAD移行シミュレーター | 無料診断 | Callet合同会社</title>
+    <meta name="description" content="UiPathからPower Automate (PAD) へのリプレイスで、ロボット運用ライセンス費用を最大90%削減。現役RPAコンサルタントが移行性診断から設計、安定テストまで安全な移行をフルサポートします。">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Callet <span>RPA Migration</span></a>
+            <nav class="nav-links">
+                <a href="#pain">お悩み</a>
+                <a href="#features">選ばれる理由</a>
+                <a href="#simulator">削減額シミュレーター</a>
+                <a href="#blog">コラムブログ</a>
+                <a href="#corporate">運営会社</a>
+                <a href="#simulator" class="cta-nav">無料診断する</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <span class="badge">RPAコスト最適化ソリューション</span>
+            <h1>UiPathのライセンス費用、<br><span>払いすぎていませんか？</span></h1>
+            <p class="subtitle">
+                年間数百万円におよぶUiPathライセンス費を、Power Automate (PAD) への移行で最大90%削減。<br>
+                現役のコンサルタント集団が、失敗しない「安全な移行ステップ」を設計・推進します。
+            </p>
+            <a href="#simulator" class="btn-primary">📊 30秒でライセンス削減額を試算する</a>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section id="pain" class="pain-section">
+        <div class="section-container">
+            <h2 class="section-title">こんなRPA運用のお悩みはありませんか？</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon">💸</div>
+                    <h3>ライセンス更新費が高すぎる</h3>
+                    <p>毎年支払うStudioやOrchestrator、Unattendedロボットの年額維持費が重くのしかかり、費用対効果（ROI）が見合わなくなっている。</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">⚠️</div>
+                    <h3>移行してフリーズしないか不安</h3>
+                    <p>UiPathからPower Automateへ切り替えたいが、独自処理やセレクタ認識のズレでエラーが多発し、業務が止まってしまうリスクが怖い。</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">🤷‍♂️</div>
+                    <h3>移行手順や方法が分からない</h3>
+                    <p>開発者ライセンス構成の変更、Orchestratorからクラウドフローへの管理設計の移植など、何から手をつければいいのか見当がつかない。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="choose-section">
+        <div class="section-container">
+            <h2 class="section-title">Callet合同会社が選ばれる3つの理由</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>1. 現役RPAコンサルタントが徹底した「移行性診断」を設計</h3>
+                    <p>UiPath独自のアクティビティや例外処理をPAD仕様へどう最適化するか、移行前に専門家チームがロードマップを策定。移行後のフリーズを完全に防ぎます。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>2. 削減されたライセンス費の一部を初期移行コストへ</h3>
+                    <p>移行によって削減される莫大なライセンスコスト（3年間で数百万円〜）の一部を初期設計・構築費用に充てることで、実質的なコスト負担をゼロに抑えて安全にプロジェクトを立ち上げます。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>3. 多事業展開の強みを活かしたIT総合サポート</h3>
+                    <p>RPA単体だけでなく、Callet合同会社の持つシステム開発・ITコンサルティング事業の知見を活かし、社内システム連携やクラウドフローの再設計まで網羅的に支援します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Section (Direct Native calculator) -->
+    <section id="simulator" class="simulator-section">
+        <div class="simulator-container">
+            <h2 class="section-title" style="margin-bottom: 1rem;">RPAライセンス削減シミュレーター</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto;">
+                現在の稼働規模を入力するだけで、Power Automateへ移行した際の「3年間のライセンス削減金額」と「移行必要性（低・中・高・緊急）」をリアルタイム診断します。
+            </p>
+            
+            <div class="calc-grid">
+                <!-- Sidebar Input form -->
+                <div class="calc-sidebar">
+                    <h3>📋 ① 現在のUiPath稼働規模</h3>
+                    <div class="form-group">
+                        <label for="devs">開発者ライセンス数 (Studio等)</label>
+                        <input type="number" id="devs" min="0" max="100" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="attended">有人ロボット実行数 (Attended)</label>
+                        <input type="number" id="attended" min="0" max="500" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="unattended">無人ロボット実行数 (Unattended)</label>
+                        <input type="number" id="unattended" min="0" max="100" value="0">
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="has_orchestrator">
+                        <label for="has_orchestrator">UiPath Orchestratorを導入している</label>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">🤖 ② 移行対象ロボットボリューム</h3>
+                    <div class="form-group">
+                        <label for="high_complexity">高難易度ロボットの数</label>
+                        <input type="number" id="high_complexity" min="0" max="100" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="mid_complexity">中難易度ロボットの数</label>
+                        <input type="number" id="mid_complexity" min="0" max="100" value="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="low_complexity">低難易度ロボットの数</label>
+                        <input type="number" id="low_complexity" min="0" max="100" value="3">
+                    </div>
+                    
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem;" id="total_robots_caption">
+                        全ロボット（移行対象）台数: <strong>6</strong> 台
+                    </p>
+
+                    <button class="btn-diagnose" id="btn_diagnose">🔍 RPAライセンス料金を診断する</button>
+                </div>
+
+                <!-- Display container -->
+                <div>
+                    <!-- State A: Waiting for diagnosis -->
+                    <div class="loading-box" id="loading_box">
+                        <div class="spinner"></div>
+                        <div class="loading-text">🔮 RPA診断君が最適なライセンス構成を分析中...</div>
+                    </div>
+
+                    <!-- State B: Result display -->
+                    <div class="results-box" id="results_box">
+                        <p class="reset-caption">ℹ️ 数値を変更して「診断する」ボタンを押すと、結果が更新されます。</p>
+                        
+                        <div class="value-cards-grid">
+                            <div class="val-card">
+                                <div class="val-card-title">UiPath 3年ライセンス費用合計</div>
+                                <div class="val-card-num" id="val_uipath_3y">0 万円</div>
+                            </div>
+                            <div class="val-card">
+                                <div class="val-card-title">Power Automate 3年ライセンス費用合計</div>
+                                <div class="val-card-num" id="val_pa_3y">0 万円</div>
+                            </div>
+                        </div>
+
+                        <!-- Savings banner -->
+                        <div class="savings-banner" id="savings_banner">
+                            <span class="savings-label">💡 PAD移行によるライセンス削減効果</span>
+                            <div class="savings-amount" id="val_savings">3年間で 0円 節約できます。</div>
+                            <span class="savings-sub" id="val_savings_sub">（年間ライセンス費用において 0.0万円 のランニング削減効果）</span>
+                        </div>
+
+                        <!-- Graph and Details -->
+                        <div class="data-display-grid">
+                            <div class="chart-container">
+                                <div class="chart-title">📊 3年間のライセンス費用比較（内訳別）</div>
+                                <div class="chart-stage">
+                                    <div class="chart-bar-wrapper">
+                                        <div class="chart-bar" id="bar_uipath">
+                                            <div class="chart-segment seg-orch" id="seg_ui_orch"></div>
+                                            <div class="chart-segment seg-unattended" id="seg_ui_unattended"></div>
+                                            <div class="chart-segment seg-attended" id="seg_ui_attended"></div>
+                                            <div class="chart-segment seg-dev" id="seg_ui_dev"></div>
+                                        </div>
+                                        <div class="chart-label">UiPath</div>
+                                    </div>
+                                    <div class="chart-bar-wrapper">
+                                        <div class="chart-bar" id="bar_pa">
+                                            <div class="chart-segment seg-unattended" id="seg_pa_unattended"></div>
+                                            <div class="chart-segment seg-attended" id="seg_pa_attended"></div>
+                                            <div class="chart-segment seg-dev" id="seg_pa_dev"></div>
+                                        </div>
+                                        <div class="chart-label">Power Automate</div>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item"><div class="legend-color seg-dev"></div>開発ライセンス</div>
+                                    <div class="legend-item"><div class="legend-color seg-attended"></div>有人ロボット</div>
+                                    <div class="legend-item"><div class="legend-color seg-unattended"></div>無人ロボット</div>
+                                    <div class="legend-item"><div class="legend-color seg-orch"></div>Orchestrator</div>
+                                </div>
+                            </div>
+
+                            <div class="table-container">
+                                <div class="table-title">📋 コスト明細 (万円)</div>
+                                <table class="detail-table">
+                                    <thead>
+                                        <tr>
+                                            <th>内訳項目</th>
+                                            <th>UiPath</th>
+                                            <th>PA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>開発 (年単価)</td>
+                                            <td id="td_ui_dev">-</td>
+                                            <td id="td_pa_dev">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>有人 (年単価)</td>
+                                            <td id="td_ui_attended">-</td>
+                                            <td id="td_pa_attended">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>無人 (年単価)</td>
+                                            <td id="td_ui_unattended">-</td>
+                                            <td id="td_pa_unattended">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Orchestrator</td>
+                                            <td id="td_ui_orch">-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3年合計</td>
+                                            <td id="td_ui_total" style="font-weight:700;">-</td>
+                                            <td id="td_pa_total" style="font-weight:700;">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div class="rec-box">
+                            <div class="rec-title">🤖 RPA診断君の選定・推奨診断</div>
+                            <div class="rec-grid">
+                                <div class="rec-action-card">
+                                    <span class="rec-action-tag">推奨アクション</span>
+                                    <h4 class="rec-action-val">Power Automate (PAD) へのライセンス移行</h4>
+                                    <div class="rec-action-points">
+                                        <div>✅ 年間費用削減</div>
+                                        <div>✅ OS親和性向上</div>
+                                        <div>✅ O365即時連携</div>
+                                    </div>
+                                </div>
+                                <div class="rec-details">
+                                    <h4>移行の必要性：<span class="urgency-badge-span" id="val_urgency_badge">-</span></h4>
+                                    <p class="rec-desc-text" id="val_urgency_desc">-</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Download Area -->
+                        <div class="cta-download-box" id="cta_download_area">
+                            <div class="download-title">🎁 PowerAutomate移行ガイドをダウンロード</div>
+                            <div class="download-sub">簡単に移行できるの？リスクは？等気になる疑問を、現役RPAコンサルタントが資料化しました。</div>
+                            
+                            <!-- Download Input Form -->
+                            <div class="native-form" id="dl_form_box">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="company_name">貴社名 *</label>
+                                        <input type="text" id="company_name" placeholder="例：株式会社デモソリューションズ" style="width:100%; padding:0.6rem 0.8rem; border:1px solid #CBD5E1; border-radius:8px; outline:none;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact_name">ご担当者名 *</label>
+                                        <input type="text" id="contact_name" placeholder="例：鈴木 太郎" style="width:100%; padding:0.6rem 0.8rem; border:1px solid #CBD5E1; border-radius:8px; outline:none;">
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-top:1rem;">
+                                    <label for="email">メールアドレス *</label>
+                                    <input type="email" id="email" placeholder="例: contact@example.com" style="width:100%; padding:0.6rem 0.8rem; border:1px solid #CBD5E1; border-radius:8px; outline:none;">
+                                </div>
+                                <button class="btn-submit-download" id="btn_submit_download">📥 無料で移行ガイドをダウンロードする</button>
+                            </div>
+
+                            <!-- Success Area -->
+                            <div class="download-success-box" id="dl_success_box">
+                                <div class="download-success-title">✅ ご登録ありがとうございました！</div>
+                                <div class="download-success-sub">以下ボタンをクリックして、PowerAutomate移行ガイドを保存してください。</div>
+                                <button class="btn-file-dl" id="btn_trigger_file_dl">📥 PowerAutomate移行ガイドをダウンロード</button>
+                                <br>
+                                <button class="btn-form-reset" id="btn_form_reset">↩️ フォームに戻る</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Archive Section (New) -->
+    <section id="blog" class="blog-section">
+        <div class="section-container">
+            <span class="badge" style="display:block; width:fit-content; margin:0 auto 1.5rem auto;">RPA移行お役立ち情報</span>
+            <h2 class="section-title">RPAリプレイス・コラムブログ</h2>
+            
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <div class="blog-card">
+                    <div class="blog-card-image-placeholder">🛠️</div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">移行ノウハウ • 2026.07.09</div>
+                        <h3 class="blog-card-title">UiPathからPower Automate移行時に発生する3大エラーと回避策</h3>
+                        <p class="blog-card-excerpt">UiPathのアクティビティをPADへ置き換える際、最もつまずきやすい「セレクタエラー」「要素認識」「例外処理の記述方法」について、具体的な回避策と対処手順を解説します。</p>
+                        <a href="blog-details.html?id=1" class="blog-card-link">記事を読む &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="blog-card">
+                    <div class="blog-card-image-placeholder">🌐</div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">設計アーキテクチャ • 2026.07.08</div>
+                        <h3 class="blog-card-title">OrchestratorからPower Automateクラウドフローへ！移行の設計ポイント</h3>
+                        <p class="blog-card-excerpt">高額な管理サーバーであるUiPath Orchestratorを廃止し、PAクラウドフローの標準機能を使ってトリガー起動やロボットスケジュール配信を美しくリプレイスする設計設計を解説します。</p>
+                        <a href="blog-details.html?id=2" class="blog-card-link">記事を読む &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card">
+                    <div class="blog-card-image-placeholder">📊</div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">ライセンス比較 • 2026.07.07</div>
+                        <h3 class="blog-card-title">UiPath vs Power Automate徹底比較！2026年最新ライセンス費用の違い</h3>
+                        <p class="blog-card-excerpt">2026年現在の両ツールのライセンス体系を徹底解剖。なぜPower Automateへの移行でコストが最大90%も削減できるのか、有人ロボットの無料枠ルールや無人ロボット費用の仕組みを明かします。</p>
+                        <a href="blog-details.html?id=3" class="blog-card-link">記事を読む &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="corporate">
+        <div class="footer-container">
+            <div>
+                <a href="#" class="footer-logo">Callet</a>
+                <p class="footer-desc">
+                    Callet合同会社は、RPA移行支援、システム受託開発、ITコンサルティングなど、企業のDX推進をワンストップでサポートするプロフェッショナル集団です。
+                </p>
+            </div>
+            <div>
+                <h4 class="footer-title">サービスリンク</h4>
+                <ul class="footer-links">
+                    <li><a href="#pain">お悩み共感</a></li>
+                    <li><a href="#features">選ばれる理由</a></li>
+                    <li><a href="#simulator">ライセンス診断</a></li>
+                    <li><a href="#blog">コラムブログ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">運営会社情報</h4>
+                <div class="corporate-info">
+                    <p><strong>会社名:</strong> Callet合同会社</p>
+                    <p><strong>事業内容:</strong> ITコンサルティング、ソフトウェア受託開発、RPA導入・移行支援事業</p>
+                    <p><strong>所在地:</strong> 東京都内</p>
+                    <br>
+                    <p><a href="#" style="color: #94A3B8; text-decoration: underline;">プライバシーポリシー</a></p>
+                    <p><a href="#" style="color: #94A3B8; text-decoration: underline;">利用規約</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Callet LLC. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Native JavaScript Calculator and Download logic -->
+    <script>
+        // DOM Elements
+        const devsInput = document.getElementById('devs');
+        const attendedInput = document.getElementById('attended');
+        const unattendedInput = document.getElementById('unattended');
+        const orchestratorInput = document.getElementById('has_orchestrator');
+        
+        const highInput = document.getElementById('high_complexity');
+        const midInput = document.getElementById('mid_complexity');
+        const lowInput = document.getElementById('low_complexity');
+        const totalRobotsCaption = document.getElementById('total_robots_caption');
+        
+        const btnDiagnose = document.getElementById('btn_diagnose');
+        const loadingBox = document.getElementById('loading_box');
+        const resultsBox = document.getElementById('results_box');
+        
+        // Output Results Elements
+        const valUipath3y = document.getElementById('val_uipath_3y');
+        const valPa3y = document.getElementById('val_pa_3y');
+        const savingsBanner = document.getElementById('savings_banner');
+        const valSavings = document.getElementById('val_savings');
+        const valSavingsSub = document.getElementById('val_savings_sub');
+        
+        // Detailed Table Cells
+        const tdUiDev = document.getElementById('td_ui_dev');
+        const tdPaDev = document.getElementById('td_pa_dev');
+        const tdUiAtt = document.getElementById('td_ui_attended');
+        const tdPaAtt = document.getElementById('td_pa_attended');
+        const tdUiUnatt = document.getElementById('td_ui_unattended');
+        const tdPaUnatt = document.getElementById('td_pa_unattended');
+        const tdUiOrch = document.getElementById('td_ui_orch');
+        const tdUiTotal = document.getElementById('td_ui_total');
+        const tdPaTotal = document.getElementById('td_pa_total');
+        
+        // CSS Stacked Bar Chart Elements
+        const barUipath = document.getElementById('bar_uipath');
+        const barPa = document.getElementById('bar_pa');
+        const segUiOrch = document.getElementById('seg_ui_orch');
+        const segUiUnatt = document.getElementById('seg_ui_unattended');
+        const segUiAtt = document.getElementById('seg_ui_attended');
+        const segUiDev = document.getElementById('seg_ui_dev');
+        const segPaUnatt = document.getElementById('seg_pa_unattended');
+        const segPaAtt = document.getElementById('seg_pa_attended');
+        const segPaDev = document.getElementById('seg_pa_dev');
+        
+        // Recommendation elements
+        const urgencyBadge = document.getElementById('val_urgency_badge');
+        const urgencyDesc = document.getElementById('val_urgency_desc');
+        
+        // Download elements
+        const companyInput = document.getElementById('company_name');
+        const contactInput = document.getElementById('contact_name');
+        const emailInput = document.getElementById('email');
+        const btnSubmitDownload = document.getElementById('btn_submit_download');
+        const dlFormBox = document.getElementById('dl_form_box');
+        const dlSuccessBox = document.getElementById('dl_success_box');
+        const btnTriggerFileDl = document.getElementById('btn_trigger_file_dl');
+        const btnFormReset = document.getElementById('btn_form_reset');
+
+        // State variables for dynamic results
+        let calculatedData = {};
+
+        // Recalculate total robot counts dynamic caption
+        function updateRobotCaption() {
+            const high = parseInt(highInput.value) || 0;
+            const mid = parseInt(midInput.value) || 0;
+            const low = parseInt(lowInput.value) || 0;
+            const total = high + mid + low;
+            totalRobotsCaption.innerHTML = `全ロボット（移行対象）台数: <strong>${total}</strong> 台`;
+        }
+
+        [highInput, midInput, lowInput].forEach(inp => {
+            inp.addEventListener('input', updateRobotCaption);
+        });
+
+        // Hide results if input values are changed (matches streamlit behavior)
+        function resetResultState() {
+            resultsBox.style.display = 'none';
+            loadingBox.style.display = 'none';
+        }
+
+        [devsInput, attendedInput, unattendedInput, orchestratorInput, highInput, midInput, lowInput].forEach(inp => {
+            inp.addEventListener('input', resetResultState);
+        });
+
+        // Main Diagnose Trigger
+        btnDiagnose.addEventListener('click', () => {
+            // Hide result, show spinner
+            resultsBox.style.display = 'none';
+            loadingBox.style.display = 'flex';
+            
+            // Smooth Scroll to loader
+            loadingBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            setTimeout(() => {
+                // Run calculations after 1.2s delay
+                runDiagnosis();
+                loadingBox.style.display = 'none';
+                resultsBox.style.display = 'block';
+                
+                // Animate bars on load
+                applyChartHeight();
+                resultsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 1200);
+        });
+
+        function runDiagnosis() {
+            // Read current parameters
+            const devs = parseInt(devsInput.value) || 0;
+            const attended = parseInt(attendedInput.value) || 0;
+            const unattended = parseInt(unattendedInput.value) || 0;
+            const hasOrch = orchestratorInput.checked;
+            
+            const high = parseInt(highInput.value) || 0;
+            const mid = parseInt(midInput.value) || 0;
+            const low = parseInt(lowInput.value) || 0;
+            const totalRobots = high + mid + low;
+
+            // Unit costs (万 Yen)
+            const UI_DEV = 40.0;
+            const UI_ATTENDED = 15.0;
+            const UI_UNATTENDED = 100.0;
+            const UI_ORCH = hasOrch ? 250.0 : 0.0;
+
+            const PA_DEV = 2.4;
+            const PA_ATTENDED = 2.4;
+            const PA_UNATTENDED = 18.0;
+
+            // UiPath Annual Calculations
+            const uiAnnualDev = devs * UI_DEV;
+            const uiAnnualAtt = attended * UI_ATTENDED;
+            const uiAnnualUnatt = unattended * UI_UNATTENDED;
+            const uiAnnualOrch = UI_ORCH;
+            const uiAnnualTotal = uiAnnualDev + uiAnnualAtt + uiAnnualUnatt + uiAnnualOrch;
+            const ui3yTotal = uiAnnualTotal * 3;
+
+            // Power Automate Annual Calculations
+            const paAnnualDev = devs * PA_DEV;
+            const extraAttended = Math.max(0, attended - devs);
+            const paAnnualAtt = extraAttended * PA_ATTENDED;
+            const paAnnualUnatt = unattended * PA_UNATTENDED;
+            const paAnnualTotal = paAnnualDev + paAnnualAtt + paAnnualUnatt;
+            const pa3yTotal = paAnnualTotal * 3;
+
+            const diff3y = Math.abs(ui3yTotal - pa3yTotal);
+            const diff3yYen = diff3y * 10000;
+            const diffAnnual = Math.abs(uiAnnualTotal - paAnnualTotal);
+
+            // Save results to state
+            calculatedData = {
+                ui3yTotal,
+                pa3yTotal,
+                diff3yYen,
+                diffAnnual,
+                totalRobots,
+                high, mid, low,
+                hasOrch
+            };
+
+            // Render Cost totals
+            valUipath3y.innerText = `${ui3yTotal.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1})} 万円`;
+            valPa3y.innerText = `${pa3yTotal.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1})} 万円`;
+
+            // Savings summary banner red highlight if > 500k yen
+            valSavings.innerText = `3年間で ${diff3yYen.toLocaleString()}円 節約できます。`;
+            valSavingsSub.innerText = `（年間ライセンス費用において ${diffAnnual.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1})}万円 のランニング削減効果）`;
+            if (diff3yYen > 500000) {
+                savingsBanner.classList.add('emphasized');
+            } else {
+                savingsBanner.classList.remove('emphasized');
+            }
+
+            // Render Table Details
+            tdUiDev.innerText = `${uiAnnualDev.toFixed(1)} /年`;
+            tdPaDev.innerText = `${paAnnualDev.toFixed(1)} /年`;
+            tdUiAtt.innerText = `${uiAnnualAtt.toFixed(1)} /年`;
+            tdPaAtt.innerText = `${paAnnualAtt.toFixed(1)} /年`;
+            tdUiUnatt.innerText = `${uiAnnualUnatt.toFixed(1)} /年`;
+            tdPaUnatt.innerText = `${paAnnualUnatt.toFixed(1)} /年`;
+            tdUiOrch.innerText = `${uiAnnualOrch.toFixed(1)} /年`;
+            tdUiTotal.innerText = `${ui3yTotal.toFixed(1)} 万円`;
+            tdPaTotal.innerText = `${pa3yTotal.toFixed(1)} 万円`;
+
+            // Urgency & Recommendations logic
+            let urgencyLevel = "中";
+            let badgeText = "🔵 中";
+            let badgeClass = "urg_mid";
+            let descText = "";
+
+            if (devs <= 1 && attended <= 2 && unattended === 0 && totalRobots <= 3) {
+                urgencyLevel = "低";
+                badgeText = "🟢 低";
+                badgeClass = "urg_low";
+                descText = `現在稼働中のUiPathのライセンス規模および移行対象のロボット台数が少ないため、コストや管理負荷における移行の必要性は「**低**」です。現状の運用を継続してもコスト的負担は小さいですが、将来的な拡張を見据えて今のうちにPADへの移行ロードマップを検証しておくことは有益です。<br><br>今回の対象には、中難易度ロボットが <strong>${mid}台</strong>、低難易度ロボットが <strong>${low}台</strong> 含まれています。これらは比較的シンプルな設計ですが、UiPathとPADの要素認識の違いにより一部エラーが発生する可能性があるため、移行時は簡単な動作チェックを行うのがお勧めです。`;
+            } else if (diff3y >= 200.0 || hasOrch) {
+                urgencyLevel = "緊急";
+                badgeText = "🔴 緊急";
+                badgeClass = "urg_emergency";
+                const orchText = hasOrch ? "また、現在高額なOrchestratorを使用されているため、スケジュール配信やトリガーの仕組みをPower Automateクラウドフローへ移植するための『管理構造の再設計』が必須となります。" : "";
+                descText = `ライセンス削減可能額が極めて大きい（3年間で <strong>${diff3y.toFixed(1)}万円</strong> のコスト削減余地あり）ため、移行の必要性は「**緊急**」です。毎月の余剰ライセンス維持費のロスが大きいため、早期の移行計画策定を強く推奨します。${orchText}<br><br>なお、移行対象に含まれる高難易度ロボット（<strong>${high}台</strong>）や中難易度ロボット（<strong>${mid}台</strong>）には、複雑な例外処理ロジックやUiPathの独自アクティビティが多く組み込まれているため、単純コピーでの移行はエラー多発の主因になります。移行後にロボットがフリーズするなどの不具合を防ぐため、事前に専門アーキテクトによる『移行性診断（コードリファクタリング計画）』を強く推奨します。<br><br>削減される莫大なライセンスコストの一部を移行初期コストに充てることで、実質的な持ち出し（リスク）を最小限に抑えた安全な移行プロジェクトを立ち上げることが可能です。`;
+            } else if (diff3y >= 50.0 || high >= 1 || unattended >= 1) {
+                urgencyLevel = "高";
+                badgeText = "🟠 高";
+                badgeClass = "urg_high";
+                const unattendedText = unattended >= 1 ? "無人ロボット（Unattended）が稼働しているため、ライセンス費用の削減ポテンシャルが大きく、PAD移行による恩恵が非常に大きくなります。" : "";
+                descText = `${unattendedText}移行によるランニングコストの削減幅が大きいため、移行の必要性は「**高**」です。次回のライセンス更新時期に合わせて、計画的な移行プロジェクトを本格検討すべき状態です。<br><br>今回移行対象となる高難易度ロボット（<strong>${high}台</strong>）および中難易度ロボット（<strong>${mid}台</strong>）は、複雑な例外処理ロジックやUiPathの独自アクティビティが組み込まれているため、PADへの単純な置き換えだけでは移行後にロボットがフリーズするなどの不具合が起きやすい傾向にあります。<br><br>そのため、事前に専門アーキテクトによる『移行性診断（コードリファクタリング計画）』を受けることを推奨します。削減される莫大なライセンスコストの一部を移行初期コストに充てることで、実質リスクゼロで安全な移行プロジェクトを推進することが可能です。`;
+            } else {
+                urgencyLevel = "中";
+                badgeText = "🔵 中";
+                badgeClass = "urg_mid";
+                descText = `ライセンス削減メリットが一定程度見込めるため、移行の必要性は「**中**」です。直ちに移行しない場合も、次回のライセンス更新タイミングに照準を合わせたスムーズな移行に向けて、既存資産の整理や移行の予備診断を進めておくのが適しています。<br><br>移行対象にロボット（高難易度: <strong>${high}台</strong>、中難易度: <strong>${mid}台</strong>）が含まれる場合、UiPathの独自仕様やエラーリカバリ処理が含まれていることが多く、単純置換ではフリーズなどの不具合が発生しやすいため、専門アーキテクトによる『移行性診断（コードリファクタリング計画）』を推奨します。<br><br>削減されるライセンスコストの一部を移行の初期設計費用に充てることで、リスクを最小限に抑えた安全な移行プロジェクトが実現できます。`;
+            }
+
+            urgencyBadge.innerText = badgeText;
+            urgencyBadge.className = `urgency-badge-span ${badgeClass}`;
+            urgencyDesc.innerHTML = descText;
+        }
+
+        // Apply visual chart heights dynamically using style values
+        function applyChartHeight() {
+            const uiVal = calculatedData.ui3yTotal || 1;
+            const paVal = calculatedData.pa3yTotal || 1;
+            const maxVal = Math.max(uiVal, paVal);
+
+            // Prepare segment costs (in 3-Year totals)
+            const devs = parseInt(devsInput.value) || 0;
+            const attended = parseInt(attendedInput.value) || 0;
+            const unattended = parseInt(unattendedInput.value) || 0;
+            const hasOrch = orchestratorInput.checked;
+
+            const uiDev = devs * 40.0 * 3;
+            const uiAtt = attended * 15.0 * 3;
+            const uiUnatt = unattended * 100.0 * 3;
+            const uiOrch = (hasOrch ? 250.0 : 0.0) * 3;
+
+            const paDev = devs * 2.4 * 3;
+            const paAtt = Math.max(0, attended - devs) * 2.4 * 3;
+            const paUnatt = unattended * 18.0 * 3;
+
+            // Apply total heights (relative percentage)
+            const uiHeightPct = (uiVal / maxVal) * 100;
+            const paHeightPct = (paVal / maxVal) * 100;
+            barUipath.style.height = `${uiHeightPct}%`;
+            barPa.style.height = `${paHeightPct}%`;
+
+            // Apply segments flex ratio or percentage
+            segUiOrch.style.height = `${(uiOrch / uiVal) * 100}%`;
+            segUiOrch.setAttribute('data-tooltip', `Orchestrator: ${uiOrch.toFixed(1)}万円`);
+            segUiUnatt.style.height = `${(uiUnatt / uiVal) * 100}%`;
+            segUiUnatt.setAttribute('data-tooltip', `無人ロボット: ${uiUnatt.toFixed(1)}万円`);
+            segUiAtt.style.height = `${(uiAtt / uiVal) * 100}%`;
+            segUiAtt.setAttribute('data-tooltip', `有人ロボット: ${uiAtt.toFixed(1)}万円`);
+            segUiDev.style.height = `${(uiDev / uiVal) * 100}%`;
+            segUiDev.setAttribute('data-tooltip', `開発ライセンス: ${uiDev.toFixed(1)}万円`);
+
+            segPaUnatt.style.height = `${(paUnatt / paVal) * 100}%`;
+            segPaUnatt.setAttribute('data-tooltip', `無人ロボット: ${paUnatt.toFixed(1)}万円`);
+            segPaAtt.style.height = `${(paAtt / paVal) * 100}%`;
+            segPaAtt.setAttribute('data-tooltip', `有人ロボット: ${paAtt.toFixed(1)}万円`);
+            segPaDev.style.height = `${(paDev / paVal) * 100}%`;
+            segPaDev.setAttribute('data-tooltip', `開発ライセンス: ${paDev.toFixed(1)}万円`);
+        }
+
+        // Form Submit & Download Logic
+        btnSubmitDownload.addEventListener('click', () => {
+            const company = companyInput.value.trim();
+            const contact = contactInput.value.trim();
+            const email = emailInput.value.trim();
+
+            if (!company || !contact || !email) {
+                alert('「貴社名」「ご担当者名」「メールアドレス」は必須入力項目です。');
+                return;
+            }
+
+            // Hide form, show success DL trigger
+            dlFormBox.style.display = 'none';
+            dlSuccessBox.style.display = 'block';
+        });
+
+        // Trigger dynamic text file creation and auto-download
+        btnTriggerFileDl.addEventListener('click', () => {
+            const data = calculatedData;
+            
+            const fileContent = `# Power Automate 移行成功ガイドブック
+RPA移行推進チーム 特別編集
+
+---
+
+## 📊 今回の試算結果サマリー
+- 移行対象ロボット数: ${data.totalRobots}台（高難易度: ${data.high}台、中難易度: ${data.mid}台、低難易度: ${data.low}台）
+- Orchestrator利用: ${data.hasOrch ? 'あり' : 'なし'}
+- 3年間でのライセンス削減効果額: ${data.diff3yYen.toLocaleString()}円
+
+---
+
+## ⚡ 移行時の3大技術障壁と解決策
+
+1. 【Orchestratorの移行壁】
+   - スケジュール・トリガー・認証情報の管理をPower Automateクラウドフローへ移植するための再設計ガイド。
+2. 【高難易度ロボットの移行壁】
+   - UiPath独自のアクティビティをPADのネイティブアクションに効率的・安全にリファクタリングする移行パターン。
+3. 【安定性テストの重要性】
+   - セレクタ認識ズレを解消し、本番環境でエラーなく稼働させるためのステップテスト設計。
+
+---
+💡 個別の技術的相談・本格的な移行診断も無料で承っております。お気軽に contact@example.com までお問い合わせください。
+`;
+
+            const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'PowerAutomate_Migration_Guide.txt');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        btnFormReset.addEventListener('click', () => {
+            // Reset fields
+            companyInput.value = '';
+            contactInput.value = '';
+            emailInput.value = '';
+            
+            // Toggle view
+            dlSuccessBox.style.display = 'none';
+            dlFormBox.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
