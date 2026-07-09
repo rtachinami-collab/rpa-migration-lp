@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無料お見積もり・個別相談窓口 | RPA移行ソリューション | Callet合同会社</title>
+    <meta name="description" content="UiPathからPower Automateへのリプレイスに関する無料お見積もり依頼・個別移行性相談の窓口です。現役のRPAコンサルタントチームが課題解決を全力サポートします。">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Callet <span>RPA Migration</span></a>
+            <nav class="nav-links">
+                <a href="index.html#pain">お悩み</a>
+                <a href="index.html#features">選ばれる理由</a>
+                <a href="index.html#simulator">削減額シミュレーター</a>
+                <a href="index.html#blog">コラムブログ</a>
+                <a href="index.html#corporate">運営会社</a>
+                <a href="contact.html" class="cta-nav">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1 class="contact-title">お見積もり・個別移行相談</h1>
+            <p class="contact-subtitle">
+                「自社のロボットが本当に移行できるか診断してほしい」「具体的な見積もりが欲しい」等、<br>
+                RPA移行に関する疑問やご相談を、現役コンサルタントが直接お伺いします（相談無料）。
+            </p>
+
+            <div class="contact-form-card">
+                <!-- Form Area -->
+                <form id="contact_form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c_company">貴社名 *</label>
+                            <input type="text" id="c_company" required placeholder="例：株式会社デモソリューションズ">
+                        </div>
+                        <div class="form-group">
+                            <label for="c_dept">部署・役職</label>
+                            <input type="text" id="c_dept" placeholder="例：情報システム部 マネージャー">
+                        </div>
+                    </div>
+
+                    <div class="form-row" style="margin-top: 1rem;">
+                        <div class="form-group">
+                            <label for="c_name">ご担当者名 *</label>
+                            <input type="text" id="c_name" required placeholder="例：鈴木 太郎">
+                        </div>
+                        <div class="form-group">
+                            <label for="c_phone">電話番号</label>
+                            <input type="tel" id="c_phone" placeholder="例：03-1234-5678" style="width: 100%; padding: 0.6rem 0.8rem; border: 1px solid #CBD5E1; border-radius: 8px; outline: none;">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="c_email">メールアドレス *</label>
+                        <input type="email" id="c_email" required placeholder="例：contact@example.com">
+                    </div>
+
+                    <div class="form-row" style="margin-top: 1rem;">
+                        <div class="form-group">
+                            <label for="c_rpa">現在導入中のRPAツール</label>
+                            <select id="c_rpa">
+                                <option value="UiPath">UiPath</option>
+                                <option value="WinActor">WinActor</option>
+                                <option value="BizRobo!">BizRobo!</option>
+                                <option value="その他">その他</option>
+                                <option value="未導入">RPA未導入 / これから検討</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="c_volume">移行対象ロボット数 (概算)</label>
+                            <select id="c_volume">
+                                <option value="3台以下">3台以下</option>
+                                <option value="4〜10台">4〜10台</option>
+                                <option value="11台以上">11台以上</option>
+                                <option value="未定">未定 / 分からない</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <label for="c_message">お問い合わせ内容 *</label>
+                        <textarea id="c_message" required rows="6" placeholder="例：UiPathからPower Automateへの移行見積もりを希望します。現在Studioが2ライセンス、ロボットが計5台稼働しています。"></textarea>
+                    </div>
+
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; text-align: center;">
+                        ※送信いただいた情報は、弊社プライバシーポリシーに基づき厳重に管理されます。
+                    </p>
+
+                    <button type="submit" class="btn-submit-contact" id="btn_contact_send">✉️ この内容で送信する（無料）</button>
+                </form>
+
+                <!-- Processing Spinner -->
+                <div class="loading-box" id="contact_loading" style="padding: 3rem 0; box-shadow: none; border: none;">
+                    <div class="spinner"></div>
+                    <div class="loading-text">🔒 暗号化通信で送信しています...</div>
+                </div>
+
+                <!-- Thanks Message -->
+                <div class="contact-success-box" id="contact_thanks">
+                    <div class="contact-success-icon">🎉</div>
+                    <h2 class="contact-success-title" style="font-size: 1.8rem; margin-bottom: 1rem;">お問い合わせを送信しました</h2>
+                    <p class="contact-success-sub" style="font-size: 1rem; line-height: 1.7; max-width: 550px; margin: 0 auto 2rem auto;">
+                        ご入力ありがとうございました。<br>
+                        Callet RPA移行チームの担当コンサルタントより、ご登録のメールアドレス宛てに<strong>3営業日以内</strong>に返信またはお見積もりのご連絡を差し上げます。
+                    </p>
+                    <a href="index.html" class="btn-primary">↩️ ホームページに戻る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a href="index.html" class="footer-logo">Callet</a>
+                <p class="footer-desc">
+                    Callet合同会社は、RPA移行支援、システム受託開発、ITコンサルティングなど、企業のDX推進をワンストップでサポートするプロフェッショナル集団です。
+                </p>
+            </div>
+            <div>
+                <h4 class="footer-title">サービスリンク</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#pain">お悩み共感</a></li>
+                    <li><a href="index.html#features">選ばれる理由</a></li>
+                    <li><a href="index.html#simulator">ライセンス診断</a></li>
+                    <li><a href="index.html#blog">コラムブログ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">運営会社情報</h4>
+                <div class="corporate-info">
+                    <p><strong>会社名:</strong> Callet合同会社</p>
+                    <p><strong>事業内容:</strong> ITコンサルティング、ソフトウェア受託開発、RPA導入・移行支援事業</p>
+                    <p><strong>所在地:</strong> 東京都内</p>
+                    <br>
+                    <p><a href="#" style="color: #94A3B8; text-decoration: underline;">プライバシーポリシー</a></p>
+                    <p><a href="#" style="color: #94A3B8; text-decoration: underline;">利用規約</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Callet LLC. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Form handler script -->
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contact_form');
+            const loader = document.getElementById('contact_loading');
+            const thanks = document.getElementById('contact_thanks');
+            
+            // Hide form, show spinner
+            form.style.display = 'none';
+            loader.style.display = 'flex';
+            
+            // Smooth Scroll to top of card
+            document.querySelector('.contact-form-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            setTimeout(() => {
+                // After 1.2s spinner simulation, show success page
+                loader.style.display = 'none';
+                thanks.style.display = 'block';
+            }, 1200);
+        }
+    </script>
+
+</body>
+</html>
