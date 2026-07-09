@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コラム詳細 | RPA移行ソリューション | Callet合同会社</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Callet <span>RPA Migration</span></a>
+            <nav class="nav-links">
+                <a href="index.html#pain">お悩み</a>
+                <a href="index.html#features">選ばれる理由</a>
+                <a href="index.html#simulator">削減額シミュレーター</a>
+                <a href="index.html#blog">コラムブログ</a>
+                <a href="index.html#corporate">運営会社</a>
+                <a href="index.html#simulator" class="cta-nav">無料診断する</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Details Section -->
+    <section class="blog-details-section">
+        <div class="blog-article-container">
+            <a href="index.html#blog" class="blog-back-link">&larr; コラム一覧に戻る</a>
+            
+            <div class="blog-details-meta">
+                <span>投稿日: <span id="post_date">2026.07.09</span></span>
+                <span>カテゴリ: <strong id="post_category">移行ノウハウ</strong></span>
+            </div>
+            
+            <h1 class="blog-details-title" id="post_title">コラムタイトル</h1>
+            
+            <div class="blog-rich-content" id="post_content">
+                <!-- JavaScript will inject content here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a href="index.html" class="footer-logo">Callet</a>
+                <p class="footer-desc">
+                    Callet合同会社は、RPA移行支援、システム受託開発、ITコンサルティングなど、企業のDX推進をワンストップでサポートするプロフェッショナル集団です。
+                </p>
+            </div>
+            <div>
+                <h4 class="footer-title">サービスリンク</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#pain">お悩み共感</a></li>
+                    <li><a href="index.html#features">選ばれる理由</a></li>
+                    <li><a href="index.html#simulator">ライセンス診断</a></li>
+                    <li><a href="index.html#blog">コラムブログ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">運営会社情報</h4>
+                <div class="corporate-info">
+                    <p><strong>会社名:</strong> Callet合同会社</p>
+                    <p><strong>事業内容:</strong> ITコンサルティング、ソフトウェア受託開発、RPA導入・移行支援事業</p>
+                    <p><strong>所在地:</strong> 東京都内</p>
+                    <br>
+                    <p><a href="#" style="color: #94A3B8; text-decoration: underline;">プライバシーポリシー</a></p>
+                    <p><a href="#" style="color: #94A3B8; text-decoration: underline;">利用規約</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Callet LLC. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript to load dynamic content -->
+    <script>
+        // Article Data (JSON schema)
+        const articles = {
+            "1": {
+                title: "UiPathからPower Automate移行時に発生する3大エラーと回避策",
+                date: "2026.07.09",
+                category: "移行ノウハウ",
+                content: `
+                    <p>UiPathからPower Automate (PAD) へのリプレイスは、ライセンス費用の大幅削減に繋がる非常に魅力的な選択肢です。しかし、いざ実際の移行プロセスに入ると、UiPathのアクティビティをそのまま直訳しただけでは正しく動作せず、エラーで停止してしまうトラブルが多く報告されています。</p>
+                    <p>本記事では、現役RPAコンサルタントの知見をもとに、移行時に最もつまずきやすい「3大エラー」と、その具体的な回避策を解説します。</p>
+
+                    <h2>1. セレクタ認識のズレ（Web / デスクトップアプリ）</h2>
+                    <p>UiPathでは「信頼性の高い独自のセレクタ解析」によってボタンやテキストボックスを補足しますが、PADではWindows標準の「UI要素認識」を使用するため、認識ルールに差異が生じます。移行後にボタンをクリックできずに止まるエラーの8割がこれが原因です。</p>
+                    <h3>💡 回避策</h3>
+                    <p>PADの要素選択エディタで「UI要素の編集」を開き、動的に変化する属性（例：IDにランダムなセッション文字列が含まれるなど）を除外します。ワイルドカード（*）やセレクタの「正規表現マッチ」を設定し、常に安定して要素を検知できるようにカスタマイズします。</p>
+
+                    <h2>2. 例外処理（エラーハンドリング）の挙動の違い</h2>
+                    <p>UiPathでは「Try Catch」アクティビティを使って全体を大きく囲むのが標準ですが、PADは「エラー発生時」のアクション（各ブロックや各アクティビティごとに設定するローカル処理）が主流です。移行時にTry Catchの構造をそのまま移植しようとすると、例外がキャッチされずにフロー全体が強制終了してしまうことがあります。</p>
+                    <h3>💡 回避策</h3>
+                    <p>PADの「ブロックのエラー発生時」アクションを使用し、エラーが発生した際に「次のアクションへ進む」か「特別なサブフローを呼び出す」かを明確に設計します。UiPathの構造を模倣するのではなく、PADが得意とする「フラットなブロック管理」へリファクタリングすることが重要です。</p>
+
+                    <h2>3. データテーブルとExcel操作のアクション構造の差</h2>
+                    <p>UiPathはExcelファイルをバックグラウンドで高速処理する「範囲を読み込み」などのメモリ上でのデータテーブル操作が得意です。一方、PADでは実際にExcelのプロセスを起動させて動かす「Excelの起動」アクションを多用するため、処理速度の低下や競合による読み込みエラーが発生しやすくなります。</p>
+                    <h3>💡 回避策</h3>
+                    <p>Excelの直接編集を最小限に抑え、PADの「SQL接続」や「テキスト/CSVのインポート」機能を活用してメモリ上で処理します。また、Excelファイルを操作する場合は、処理開始前にファイルが開かれていないかの確認や、処理終了後の「Excelの閉じる（保存して閉じる）」を確実に設定します。</p>
+
+                    <blockquote>
+                        <strong>まとめ:</strong><br>
+                        UiPathの処理を「1対1」で単純にコピー＆ペーストするような移行は不具合の元です。それぞれのRPAツールが持つアーキテクチャの違いを理解し、PADが得意とする書き方へ再設計することが移行成功の唯一の鍵となります。
+                    </blockquote>
+                `
+            },
+            "2": {
+                title: "OrchestratorからPower Automateクラウドフローへ！移行の設計ポイント",
+                date: "2026.07.08",
+                category: "設計アーキテクチャ",
+                content: `
+                    <p>UiPathを本格運用している多くの企業が導入している「UiPath Orchestrator」。スケジュール実行やアセット管理、ロボットの一元監視として欠かせないシステムですが、年額250万円以上という非常に高い維持コストがネックになりがちです。</p>
+                    <p>Power Automateへ移行する際、このOrchestratorの機能をどのようにリプレイスし、コストを最小化できるかを詳しく解説します。</p>
+
+                    <h2>1. スケジュール実行とトリガー配信のリプレイス</h2>
+                    <p>Orchestratorで行っていた「毎朝9時に実行」「メールを受信したらロボットを起動」といったトリガー管理は、Power Automateのクラウド環境（Power Automate for cloud）にある「クラウドフロー」へ移植します。</p>
+                    <p>クラウドフローは標準でスケジュールトリガー（毎日、毎週など）や、Outlookメール受信トリガー、SharePointの更新トリガーを標準装備しているため、Orchestratorなしでも完全に同等のスケジュール管理・自動トリガー実行が実現できます。</p>
+
+                    <h2>2. オンプレミスデータゲートウェイによるセキュアなPC接続</h2>
+                    <p>クラウドフローから、社内オンプレミス環境（ローカルPCや社内サーバー）で稼働するPAD（Power Automate for desktop）を動かすためには、「オンプレミスデータゲートウェイ（On-Premises Data Gateway）」という中間モジュールを設定します。</p>
+                    <p>これにより、外部から安全な暗号化通信でローカルのロボットを叩くことができ、Orchestratorで行っていた「無人ロボット（Unattended）の起動・割り当て」を、追加費用なしでクラウドから集中コントロールできるようになります。</p>
+
+                    <h2>3. アセット（接続資格情報や環境変数）の移行</h2>
+                    <p>Orchestratorに保存されていたシステムログイン用のID/パスワードなどのクレデンシャル情報は、Microsoft 365の「Azure Key Vault」や、PAD内の「接続」および「資格情報マネージャー」に移し替えます。</p>
+                    <p>暗号化された安全なストレージからフロー実行時に動的に資格情報を読み込ませることで、パスワードをロボットコード内に直接書き込むことなく、強固なセキュリティを担保した状態で運用管理できます。</p>
+
+                    <blockquote>
+                        <strong>アーキテクトからのアドバイス:</strong><br>
+                        Orchestratorの廃止は、単にライセンス代を削減するだけでなく、複雑なオンプレミスサーバーのインフラ管理（Windows Serverのセキュリティアップデート等）から完全に解放されるという運用管理上の大きなメリットももたらします。
+                    </blockquote>
+                `
+            },
+            "3": {
+                title: "UiPath vs Power Automate徹底比較！2026年最新ライセンス費用の違い",
+                date: "2026.07.07",
+                category: "ライセンス比較",
+                content: `
+                    <p>RPAツールの選定において、最も重要でありながら最も複雑なのが「ライセンス費用の比較」です。特に、業界トップのUiPathと、Microsoftが提供し急速にシェアを伸ばしているPower Automate（PAD）では、料金体系の設計思想が大きく異なります。</p>
+                    <p>2026年現在の最新ライセンス体系をふまえ、なぜ移行で「最大90%のコスト削減」が狙えるのかを徹底解説します。</p>
+
+                    <h2>1. 開発者ライセンス：圧倒的な基本コスト差</h2>
+                    <p>シナリオを作成・開発するための開発者ライセンスを比較すると、その価格差は一目瞭然です。</p>
+                    <ul>
+                        <li><strong>UiPath Studio</strong>: 約40万円 /年（1ユーザーあたり）</li>
+                        <li><strong>Power Automate Premium</strong>: 2.4万円 /年（2,000円 /月・1ユーザーあたり）</li>
+                    </ul>
+                    <p>PADは開発ライセンスの中に、有人ロボットの実行ライセンス（Attended同等）も標準で内包されているため、開発者＝実行者となる多くの現場において、1ユーザーあたり年間37万円以上の差額が発生します。</p>
+
+                    <h2>2. 有人ロボット（Attended）の「無料枠」のカラクリ</h2>
+                    <p>UiPathではロボットを動かすPC1台ごとに「Attended Robotライセンス（年額約15万円）」が必要です。一方、Power Automateでは以下のような画期的な料金体系になっています。</p>
+                    <ul>
+                        <li>開発者用ライセンスを持っている人は、有人ロボットを台数制限なしで無料実行可能。</li>
+                        <li>したがって、有人ロボットの台数が開発者ライセンス数を下回る小中規模運用の場合は、有人ロボットのライセンス費用は**完全に0円**になります。</li>
+                    </ul>
+
+                    <h2>3. 無人ロボット（Unattended）のプロセスライセンス比較</h2>
+                    <p>人手を介さずサーバー上で実行する「無人ロボット（Unattended）」は、RPAの真骨頂ですが、UiPathでは1台あたり年間約100万円が必要であり、大規模運用での最大のコスト圧迫要因となっています。</p>
+                    <p>Power Automateでは、これを「プロセスライセンス（Process License、旧アテンドなしアドオン）」として提供しており、**年額18万円（月額15,000円）**で稼働可能です。1台増やすごとのコスト増加額が約5分の1に抑えられるため、スケールさせればさせるほど、削減金額のメリットが跳ね上がります。</p>
+
+                    <blockquote>
+                        <strong>比較まとめ（3ユーザー・無人1台運用の3年総額例）:</strong><br>
+                        ・UiPath: 開発(120万) ＋ 無人(300万) ＝ 420万円 / 3年<br>
+                        ・PA: 開発(7.2万) ＋ 無人(54万) ＝ 61.2万円 / 3年<br>
+                        ➡️ **約358万円（約85%）のライセンス費カットが実現！**
+                    </blockquote>
+                `
+            }
+        };
+
+        // Parse query parameter ?id=X
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+
+        // Render Article
+        const article = articles[articleId] || articles["1"]; // Default to article 1 if not found or invalid
+        
+        document.getElementById('post_date').innerText = article.date;
+        document.getElementById('post_category').innerText = article.category;
+        document.getElementById('post_title').innerText = article.title;
+        document.getElementById('post_content').innerHTML = article.content;
+        
+        // Dynamically update page title for browser tab (good for SEO)
+        document.title = `${article.title} | RPA移行ソリューション | Callet合同会社`;
+    </script>
+
+</body>
+</html>
